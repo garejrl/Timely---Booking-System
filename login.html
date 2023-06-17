@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+    <title>Timely - Login</title>
+</head>
+<body>
+    <div class="login">
+        <form action="" method="POST" name = "form">
+            <h2 id="name">LOGIN</h2>
+            <label for="email">Email Address</label><br>
+            <input type="text" name = "email" placeholder="Enter email address" required><br>
+            <label for="password">Password</label><br>
+            <input type="password" name = "password" placeholder="Enter password" required><br>
+            <p>Don't have an account yet? <a href="register.html">Signup</a></p>
+            <button type="submit" event = "submit">Login</button>
+            <div class="close">
+                <a href="index.html">Close</a>
+            </div>
+        </form>        
+    </div>
+    <script>
+      document.getElementById("").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        var username = document.getElementsByName("email")[0].value;
+        var password = document.getElementsByName("password")[0].value;
+
+        // Perform login validation
+        if (username === "pochy" && password === "123") {
+          window.location.href = "home.html"; // Redirect to home.html
+        } else {
+          alert("Invalid username or password"); // Show error message
+        }
+      });
+    </script>
+</body>
+</html> 

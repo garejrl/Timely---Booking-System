@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+    <title>Timely</title>
+</head>
+<body>
+    <div class="nav1">
+            <h1>TIMELY</h1>
+        
+        <div class="menu">
+            <a href="home.html" class="f111 active">
+                <i class="fas fa-home"></i>
+            </a>
+            <a href="availability.html" class="f111 active ">
+                <i class="fas fa-calendar-alt"></i>
+            </a>
+            <a href="notifications.html" class="f111 active">
+                <i class="fas fa-bell"></i>
+            </a>
+            <a href="logout.html" class="f111 active" id="out">
+                <i class="fas fa-power-off"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="menu1"> 
+        <div class="schedule" id="sched">
+           <h4>Scheduled event</h4>
+           <button class="add" onclick="bookappointment()"><i class="fas fa-plus"></i>  Book appointment</button>
+        </div>
+    </div>
+        <div class="appointment1" id="getapp">
+        <form action="#" class="form-container">
+            <h1>Book an appointment</h1>
+            
+            <input type="text" placeholder="Your name" name="name" required>
+            <input type="email" placeholder="Your email" name="email" required>
+            <div class="form-row">
+                <div class="date">
+                    <input type="date" class="datepicker" placeholder="Select Time" data-target="#time" data-toggle="datetimepicker" required/>
+                </div>
+                <div class="time">
+                    <input type="time" class="timepicker" placeholder="Select Date" data-target="#time" data-toggle="datetimepicker" required/>
+                </div>
+            </div>
+           
+                <button type="submit" class="btn">Add Appointment</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            
+        </form>
+        </div>
+        
+        <!--<div id="logout">
+            <div class="out">
+                <div class="confirm">
+                    <h3>Logout Confirmation</h3>
+                    <p>Are you sure you want to logout?</p>
+                    <div class="option">
+                        <div class="yes" onclick="yes()">
+                            <button type="submit">Yes</button>
+                        </div>
+                        <div class="no" onclick="no()">
+                            <button type="submit">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+
+    <script>
+    var getappointment = document.getElementById("getapp");
+    var signout = document.getElementById("logout");
+    var yess = document.getElementById("yes");
+    var nos = document.getElementById("no");
+
+    function bookappointment() {
+    document.getElementById("getapp").style.display = "block";
+    }
+
+    function closeForm() {
+    document.getElementById("getapp").style.display = "none";
+    }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+    <title>Timely</title>
+</head>
+<body>
+    <div id="logout">
+        <div class="out">
+            <div class="confirm">
+                <h3>Logout Confirmation</h3>
+                <p>Are you sure you want to logout?</p>
+                <div class="option">
+                    <div class="yes" onclick="yes()">
+                        <button type="submit">Yes</button>
+                    </div>
+                    <div class="no" onclick="no()">
+                        <button type="submit">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function yes(){
+            window.location.href = "index.html";
+        }
+
+        function no(){
+            window.location.href = "home.html";
+        }
+    </script>
+    
+</body>
+</html>
